@@ -1,3 +1,5 @@
+/* Copyright 2021 Nikita Zheleztsov */
+
 #include <iostream>
 #include <memory>
 #include <fstream>
