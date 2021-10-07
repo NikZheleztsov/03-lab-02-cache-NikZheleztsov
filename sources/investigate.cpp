@@ -62,7 +62,7 @@ std::string Investigation::get_report()
 //   Experiment  //
 ///////////////////
 
-Experiment::Experiment(int* begin, 
+Experiment::Experiment(int* begin,
         int* end, Travel_order& order)
 {
     // Buffer size
@@ -80,14 +80,14 @@ Experiment::Experiment(int* begin,
     if (order == direct_order)
     {
         time_start = std::chrono::steady_clock::now();
-        for (size_t index = 0; index < 1000; ++index, 
+        for (size_t index = 0; index < 1000; ++index,
                 temp += (end - begin) / 1000)
             k = *temp;
         time_end = std::chrono::steady_clock::now();
 
     } else if (order == reverse_order) {
         time_start = std::chrono::steady_clock::now();
-        for (size_t index = 0; index < 1000; ++index, 
+        for (size_t index = 0; index < 1000; ++index,
                 temp -= (end - begin) / 1000)
             k = *temp;
         time_end = std::chrono::steady_clock::now();
@@ -110,11 +110,11 @@ Experiment::Experiment(int* begin,
 
 std::string Experiment::get_data()
 {
-    std::string data ("        input_data:\n\          buffer_size: ");
+    std::string data("        input_data:\n\          buffer_size: ");
 
-    data += std::to_string(buffer_size) + "KiB\n" 
+    data += std::to_string(buffer_size) + "KiB\n"
         + "\        results:\n          duration: "
         + std::to_string(duration.count()) + "ns\n";
 
-   return data; 
+   return data;
 }
