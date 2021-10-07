@@ -75,7 +75,7 @@ Experiment::Experiment(int* begin,
 
     int* temp;
     order != reverse_order ? temp = begin : temp = end;
-    
+
     std::chrono::time_point<std::chrono::steady_clock> time_start, time_end;
     if (order == direct_order)
     {
